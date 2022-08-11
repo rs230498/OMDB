@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info App</title>
+    <style>
+        *{
+            background-color: black;
+        }
+        #mia{
+            color: rgb(255, 230, 0);text-align: center;
+        }
+        #sea{
+            display: flex;width: 54%;margin: auto;justify-content: space-between;
+            position: relative;
+        }
+        #name{
+            width: 70%;height: 40px;border-radius: 8px;font-size: 18px;padding-left: 20px;color: white;
+            border: 1px solid white;
+        }
+        #sub{
+            height: 100%;width: 25%;border: none;background-color: rgb(240, 102, 10);color: white;border-radius: 8px;
+            padding: 10px;font-size: 18px;cursor: pointer;
+        }
+        #mov{
+            width: 80%;margin: auto;margin-top: 15px;display: flex;justify-content: space-between;display: none;
+            z-index: 1;
+        }
+        #mi{
+            width: 35%;margin-top: 15px;height: 65vh;
+        }
+        #mi>img{
+            width: 100%;border-radius: 10px;
+        }
+        #details{
+            width: 60%;display: block;position: relative;
+        }
+        #details>div{
+            display: flex;align-items: center;
+        }
+        #details>div>span{
+            font-size: 20px;
+        }
+        #er{
+            width: 50%;margin: auto;margin-top: 40px;display: none;z-index: 1;
+        }
+        #er>img{
+            width: 100%;
+        }
+        #rec{
+            position: absolute;right: 0px;top: 10px;width: 25%;height: 15vh;
+        }
+        #rec>img{
+            width: 100%;height: 100%;display: none;
+        }
+        #t{
+            color: rgb(255, 208, 0);
+        }
+        h3{
+            color: white;
+        }
+        span{
+            color: white;font-weight: lighter;
+        }
+        
+        #resu1{
+            position: absolute;left:2px;top: 100%; width: 73%;max-height: 400px;overflow-y: scroll;z-index: 10000;
+        }
+        #resu1>div{
+            display:flex;align-items: center;margin-bottom: 2px;background-color: gray;border-radius: 5px;height: 100px;
+        }
+        #resu1>div>img{
+            width: 20%;border-radius: 5px;height: 100%;border: none;
+        }
+        #resu1>div>h3{
+            width: 70%;margin-left: 12px;overflow: hidden;color: black;background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mia"><u>!!..Movie Info App..!!</u></h1>
+    <div id="sea">
+        <input type="text" onkeyup="m2()" id="name" placeholder="Search Movie...">
+        <button id="sub" onclick="ser()">Search</button> 
+        <div id="resu1">
+            
+        </div>
+    </div>
+    
+    <div id="er"><img src="https://i.redd.it/ds1luav7dl851.jpg" alt=""></div>
+    <div id="mov">
+        <div id="mi"></div>
+        <div id="details">
+            <div><h3>Title :&nbsp;&nbsp;</h3><h2 id="t"></h2></div>
+            <div><h3>Actors :&nbsp;&nbsp;</h3><span id="act"></span></div>
+            <div><h3>Release Date :&nbsp;&nbsp;</h3><span id="rd"></span></div>
+            <div><h3>Ratings :&nbsp;&nbsp;</h3><span id="rat"></span></div>
+            <div><h3>Director :&nbsp;&nbsp;</h3><span id="dir"></span></div>
+            <div><h3>Genre :&nbsp;&nbsp;</h3><span id="gen"></span></div>
+            <div><h3>Language :&nbsp;&nbsp;</h3><span id="lan"></span></div>
+            <div id="rec"><img src="https://media.istockphoto.com/vectors/recommend-icon-banner-recommended-with-thumb-up-red-label-best-brend-vector-id1299795339?b=1&k=20&m=1299795339&s=170667a&w=0&h=gQHUbiOo37bDzV0C-CQx875tHmcbBHuE7L4hnIYdZh8=" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="./i.js"></script>
